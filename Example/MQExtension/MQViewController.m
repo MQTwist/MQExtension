@@ -7,6 +7,7 @@
 //
 
 #import "MQViewController.h"
+#import <UIColor+Extension.h>
 
 @interface MQViewController ()
 
@@ -17,13 +18,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [self MQ_AddBtn];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)MQ_AddBtn {
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    btn.frame = CGRectMake(0, 0, 100, 100);
+    btn.center = self.view.center;
+    btn.backgroundColor = [UIColor redColor];
+    [btn setTitle:@"Button" forState:UIControlStateNormal];
+    [self.view addSubview:btn];
+    [btn addTarget:self action:@selector(btnClick:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)btnClick:(UIButton *)sender {
+    sender.backgroundColor = UIColor.randomColor;
 }
 
 @end

@@ -1,0 +1,16 @@
+PODS:
+  - MQExtension (1.0.4)
+
+DEPENDENCIES:
+  - MQExtension (from `../`)
+
+EXTERNAL SOURCES:
+  MQExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MQExtension: e9932f7f979e568a04b95e77054dab117bc50c5c
+
+PODFILE CHECKSUM: 6183aa4977c1c14adc69a84847c41e7361fd6218
+
+COCOAPODS: 1.11.2
